@@ -1,0 +1,6 @@
+.venv/
+__pycache__/
+*.pyc
+.memory/
+.DS_Store
+data/magnifica-en.html
