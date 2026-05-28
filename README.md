@@ -1,0 +1,1 @@
+# Magnifica Humanitas — Traduction latine
