@@ -277,6 +277,7 @@ def render_page(lang: str, all_data: dict[str, dict]) -> str:
   <meta name="keywords" content="{esc(keywords(lang))}">
   <meta name="author" content="Pope Leo XIV">
   <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="google-site-verification" content="m3Pxqw2rw3S3dP739bj4H6l_BxJGyAnJC31JIDRv2gc">
   <link rel="canonical" href="{DOMAIN}/{lang}/">
   {hreflang_tags(lang)}
   <meta property="og:type" content="article">
@@ -364,6 +365,7 @@ def render_root_index() -> str:
   <title>Magnifica Humanitas — Encyclical of Pope Leo XIV (multilingual edition)</title>
   <meta name="description" content="Encyclical Magnifica Humanitas by Pope Leo XIV (15 May 2026) on the protection of the human person in the age of artificial intelligence. Bilingual edition: 7 vernacular languages + Latin.">
   <link rel="canonical" href="{DOMAIN}/">
+  <meta name="google-site-verification" content="m3Pxqw2rw3S3dP739bj4H6l_BxJGyAnJC31JIDRv2gc">
   {hreflang_tags("en")}
   <meta property="og:type" content="website">
   <meta property="og:title" content="Magnifica Humanitas — Multilingual Edition">
@@ -441,7 +443,7 @@ Sitemap: {DOMAIN}/sitemap.xml
 def render_favicon_svg() -> str:
     return """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
   <rect width="64" height="64" rx="8" fill="#6e1c1c"/>
-  <text x="32" y="46" text-anchor="middle" font-family="Cormorant Garamond, Garamond, serif" font-size="44" font-weight="600" fill="#fbf6e8">MH</text>
+  <text x="32" y="46" text-anchor="middle" font-family="Georgia, Palatino, serif" font-size="44" font-weight="600" fill="#fbf6e8">MH</text>
 </svg>
 """
 
@@ -455,12 +457,12 @@ def render_og_image_svg() -> str:
     </linearGradient>
   </defs>
   <rect width="1200" height="630" fill="url(#bg)"/>
-  <text x="600" y="160" text-anchor="middle" font-family="Cormorant Garamond, Garamond, serif" font-size="22" letter-spacing="6" fill="#6e1c1c">LITTERAE ENCYCLICAE · LEO PP. XIV · MMXXVI</text>
-  <text x="600" y="320" text-anchor="middle" font-family="Cormorant Garamond, Garamond, serif" font-size="120" font-weight="600" fill="#1c1410">Magnifica Humanitas</text>
-  <text x="600" y="400" text-anchor="middle" font-family="Cormorant Garamond, Garamond, serif" font-size="36" font-style="italic" fill="#4a3a2e">De persona humana tuenda aetate intellegentiae artificialis</text>
-  <text x="600" y="460" text-anchor="middle" font-family="EB Garamond, Garamond, serif" font-size="26" font-style="italic" fill="#4a3a2e">Édition bilingue · Bilingual edition · Edizione bilingue</text>
+  <text x="600" y="160" text-anchor="middle" font-family="Georgia, Palatino, serif" font-size="22" letter-spacing="6" fill="#6e1c1c">LITTERAE ENCYCLICAE · LEO PP. XIV · MMXXVI</text>
+  <text x="600" y="320" text-anchor="middle" font-family="Georgia, Palatino, serif" font-size="120" font-weight="600" fill="#1c1410">Magnifica Humanitas</text>
+  <text x="600" y="400" text-anchor="middle" font-family="Georgia, Palatino, serif" font-size="36" font-style="italic" fill="#4a3a2e">De persona humana tuenda aetate intellegentiae artificialis</text>
+  <text x="600" y="460" text-anchor="middle" font-family="Georgia, Palatino, serif" font-size="26" font-style="italic" fill="#4a3a2e">Édition bilingue · Bilingual edition · Edizione bilingue</text>
   <line x1="450" y1="510" x2="750" y2="510" stroke="#a04444" stroke-width="1"/>
-  <text x="600" y="555" text-anchor="middle" font-family="Cormorant Garamond, Garamond, serif" font-size="22" letter-spacing="3" fill="#6e1c1c">magnifica-humanitas.lat</text>
+  <text x="600" y="555" text-anchor="middle" font-family="Georgia, Palatino, serif" font-size="22" letter-spacing="3" fill="#6e1c1c">magnifica-humanitas.lat</text>
 </svg>
 """
 
