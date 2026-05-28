@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f1e9d5"/>
+      <stop offset="1" stop-color="#f7f3ea"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <text x="600" y="160" text-anchor="middle" font-family="Cormorant Garamond, Garamond, serif" font-size="22" letter-spacing="6" fill="#6e1c1c">LITTERAE ENCYCLICAE · LEO PP. XIV · MMXXVI</text>
+  <text x="600" y="320" text-anchor="middle" font-family="Cormorant Garamond, Garamond, serif" font-size="120" font-weight="600" fill="#1c1410">Magnifica Humanitas</text>
+  <text x="600" y="400" text-anchor="middle" font-family="Cormorant Garamond, Garamond, serif" font-size="36" font-style="italic" fill="#4a3a2e">De persona humana tuenda aetate intellegentiae artificialis</text>
+  <text x="600" y="460" text-anchor="middle" font-family="EB Garamond, Garamond, serif" font-size="26" font-style="italic" fill="#4a3a2e">Édition bilingue · Bilingual edition · Edizione bilingue</text>
+  <line x1="450" y1="510" x2="750" y2="510" stroke="#a04444" stroke-width="1"/>
+  <text x="600" y="555" text-anchor="middle" font-family="Cormorant Garamond, Garamond, serif" font-size="22" letter-spacing="3" fill="#6e1c1c">magnifica-humanitas.lat</text>
+</svg>

@@ -1,17 +1,49 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Magnifica Humanitas — Versio Latina</title>
-  <meta name="description" content="Encyclique Magnifica Humanitas du pape Léon XIV (2026), édition bilingue avec traduction latine. Texte officiel en 7 langues vernaculaires.">
-  <meta property="og:title" content="Magnifica Humanitas — Versio Latina">
-  <meta property="og:description" content="Encyclique de Léon XIV sur l'IA, édition bilingue vernaculaire / latin.">
-  <meta property="og:type" content="article">
+  <title>Magnifica Humanitas — Encyclical of Pope Leo XIV (multilingual edition)</title>
+  <meta name="description" content="Encyclical Magnifica Humanitas by Pope Leo XIV (15 May 2026) on the protection of the human person in the age of artificial intelligence. Bilingual edition: 7 vernacular languages + Latin.">
+  <link rel="canonical" href="https://magnifica-humanitas.lat/">
+  <link rel="alternate" hreflang="fr" href="https://magnifica-humanitas.lat/fr/">
+  <link rel="alternate" hreflang="en" href="https://magnifica-humanitas.lat/en/">
+  <link rel="alternate" hreflang="es" href="https://magnifica-humanitas.lat/es/">
+  <link rel="alternate" hreflang="it" href="https://magnifica-humanitas.lat/it/">
+  <link rel="alternate" hreflang="de" href="https://magnifica-humanitas.lat/de/">
+  <link rel="alternate" hreflang="pt" href="https://magnifica-humanitas.lat/pt/">
+  <link rel="alternate" hreflang="pl" href="https://magnifica-humanitas.lat/pl/">
+  <link rel="alternate" hreflang="la" href="https://magnifica-humanitas.lat/la/">
+  <link rel="alternate" hreflang="x-default" href="https://magnifica-humanitas.lat/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Magnifica Humanitas — Multilingual Edition">
+  <meta property="og:description" content="Pope Leo XIV's encyclical on AI and human dignity, in 7 languages + Latin.">
+  <meta property="og:url" content="https://magnifica-humanitas.lat/">
+  <meta property="og:image" content="https://magnifica-humanitas.lat/assets/og-image.png">
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=EB+Garamond&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/style.css">
+  <style>
+    .lang-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:1rem; max-width:600px; margin:3rem auto; padding:0; list-style:none; }
+    .lang-grid a { display:block; padding:1.2rem; text-align:center; border:1px solid var(--rule); border-radius:4px; background:var(--bg-elev); color:var(--ink); text-decoration:none; font-family:var(--display); font-size:1.2rem; transition:all .2s; }
+    .lang-grid a:hover { border-color:var(--accent); color:var(--accent); transform:translateY(-2px); box-shadow:var(--shadow); }
+  </style>
+  <script>
+    (function() {
+      try {
+        var saved = localStorage.getItem("mh.vern");
+        if (saved && ["fr","en","es","it","de","pt","pl","la"].indexOf(saved) >= 0) {
+          window.location.replace("/" + saved + "/");
+          return;
+        }
+        var nav = (navigator.language || "en").slice(0, 2).toLowerCase();
+        if (["fr","en","es","it","de","pt","pl"].indexOf(nav) >= 0) {
+          window.location.replace("/" + nav + "/");
+        }
+      } catch (_) {}
+    })();
+  </script>
 </head>
 <body>
   <header class="masthead">
@@ -19,46 +51,19 @@
       <p class="eyebrow">Litterae Encyclicae · Leo PP. XIV · MMXXVI</p>
       <h1>Magnifica Humanitas</h1>
       <p class="subtitle"><em>De persona humana tuenda aetate intellegentiae artificialis</em></p>
-      <p class="subtitle-fr" id="subtitle-vern">Sur la protection de la personne humaine à l'ère de l'intelligence artificielle</p>
-      <p class="date">Romae, apud Sanctum Petrum · die XV mensis Maii anno MMXXVI</p>
+      <p class="subtitle-fr">Encyclical of Pope Leo XIV · 15 May 2026 · on AI and human dignity</p>
     </div>
   </header>
-
-  <div class="controls container">
-    <div class="lang-picker">
-      <label for="vern-select">Vernacula</label>
-      <select id="vern-select">
-        <option value="fr">Français</option>
-        <option value="en">English</option>
-        <option value="es">Español</option>
-        <option value="it">Italiano</option>
-        <option value="de">Deutsch</option>
-        <option value="pt">Português</option>
-        <option value="pl">Polski</option>
-      </select>
-    </div>
-    <div class="lang-toggle" role="group" aria-label="Affichage des langues">
-      <button data-mode="both" class="active">Vern + Lat</button>
-      <button data-mode="vern">Vern</button>
-      <button data-mode="la">Lat</button>
-    </div>
-  </div>
-
-  <nav class="toc container" aria-label="Index">
-    <h2 id="toc-title">Index Capitum</h2>
-    <ol class="toc-list" id="toc-list"></ol>
-  </nav>
-
-  <main class="container" id="main"></main>
-
+  <main class="container">
+    <h2 style="text-align:center;font-family:var(--display);color:var(--accent);letter-spacing:.2em;text-transform:uppercase;font-size:.9rem;margin-top:3rem">Choose a language · Elige una lengua · Wählen Sie eine Sprache</h2>
+    <ul class="lang-grid">
+      <li><a href="/fr/" hreflang="fr">Français</a></li><li><a href="/en/" hreflang="en">English</a></li><li><a href="/es/" hreflang="es">Español</a></li><li><a href="/it/" hreflang="it">Italiano</a></li><li><a href="/de/" hreflang="de">Deutsch</a></li><li><a href="/pt/" hreflang="pt">Português</a></li><li><a href="/pl/" hreflang="pl">Polski</a></li><li><a href="/la/" hreflang="la">Latina</a></li>
+    </ul>
+  </main>
   <footer>
     <div class="container">
-      <p id="source-note">Texte officiel : © Libreria Editrice Vaticana — <a id="vatican-link" href="https://www.vatican.va/content/leo-xiv/fr/encyclicals/documents/20260515-magnifica-humanitas.html" rel="noopener">vatican.va</a></p>
-      <p>Traduction latine : œuvre dérivée non officielle, générée par modèle de langue (Claude Sonnet 4.6) à des fins d'étude et d'usage liturgique privé. Aucune valeur magistérielle.</p>
-      <p class="small">Édition bilingue · Code source : <a href="https://github.com/thibpic/magnifica-humanitas">github.com/thibpic/magnifica-humanitas</a></p>
+      <p>© Libreria Editrice Vaticana — <a href="https://www.vatican.va/">vatican.va</a> · Source: <a href="https://github.com/thibpic/magnifica-humanitas">github.com/thibpic/magnifica-humanitas</a></p>
     </div>
   </footer>
-
-  <script src="assets/app.js"></script>
 </body>
 </html>
