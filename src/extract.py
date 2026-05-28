@@ -5,8 +5,7 @@ from pathlib import Path
 from bs4 import BeautifulSoup
 
 ROOT = Path(__file__).resolve().parent.parent
-SRC = ROOT / "data" / "magnifica-fr.html"
-OUT = ROOT / "data" / "magnifica-fr.json"
+LANGS = ["fr", "en", "es", "it", "de", "pt", "pl"]
 
 
 def extract(html_path: Path):
@@ -50,13 +49,17 @@ def extract(html_path: Path):
 
 
 def main():
-    sections = extract(SRC)
-    total_chars = sum(len(p) for s in sections for p in s["paragraphs"])
-    print(f"{len(sections)} sections, {total_chars} caractères")
-    for i, s in enumerate(sections[:8]):
-        print(f"  [{i}] {s['title'][:60]} — {len(s['paragraphs'])} p")
-    OUT.write_text(json.dumps(sections, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(f"-> {OUT}")
+    for lang in LANGS:
+        src = ROOT / "data" / f"magnifica-{lang}.html"
+        out = ROOT / "data" / f"magnifica-{lang}.json"
+        if not src.exists():
+            print(f"[{lang}] source absente, skip")
+            continue
+        sections = extract(src)
+        total_chars = sum(len(p) for s in sections for p in s["paragraphs"])
+        counts = [len(s["paragraphs"]) for s in sections]
+        print(f"[{lang}] {len(sections)} sections, {total_chars}c, paragraphes/sec={counts}")
+        out.write_text(json.dumps(sections, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
 if __name__ == "__main__":
