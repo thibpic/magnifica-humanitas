@@ -1,4 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
   <rect width="64" height="64" rx="8" fill="#6e1c1c"/>
-  <text x="32" y="46" text-anchor="middle" font-family="Cormorant Garamond, Garamond, serif" font-size="44" font-weight="600" fill="#fbf6e8">MH</text>
+  <text x="32" y="46" text-anchor="middle" font-family="Georgia, Palatino, serif" font-size="44" font-weight="600" fill="#fbf6e8">MH</text>
 </svg>
